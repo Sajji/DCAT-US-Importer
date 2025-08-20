@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "defaults": {
+    "headless": true,
+    "timeoutMs": 600000,
+    "retries": 2
+  },
+  "sources": [
+    {
+      "url": "https://datainventory.doi.gov/data.json"
+    }
+  ]
+}
