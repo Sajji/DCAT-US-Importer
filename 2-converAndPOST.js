@@ -7,8 +7,8 @@ const dataDirectory = "./dataDownloads"; // Directory containing your source JSO
 const collibraHostname = 'fedworld.collibra.com'; 
 const collibraPort = 443; 
 const collibraApiPath = '/rest/2.0/import/json-job'; 
-const username = 'SysAdmin'; // Replace with your Collibra username
-const password = 'gomer'; // Replace with your Collibra password
+const username = 'USERNAME'; // Replace with your Collibra username
+const password = 'PASSWORD'; // Replace with your Collibra password
 //***********************************
 
 function transformData(data, comName) {
@@ -198,4 +198,5 @@ fs.readdir(dataDirectory, (err, files) => {
             }
         }
     });
+
 });
