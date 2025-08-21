@@ -7,7 +7,7 @@
   },
   "sources": [
     {
-      "url": "https://datainventory.doi.gov/data.json"
+      "url": "https://data.cms.gov/data.json"
     }
   ]
 }

@@ -7,8 +7,8 @@ const dataDirectory = "./dataDownloads"; // Directory containing your source JSO
 const collibraHostname = 'fedworld.collibra.com'; 
 const collibraPort = 443; 
 const collibraApiPath = '/rest/2.0/import/json-job'; 
-const username = 'USERNAME'; // Replace with your Collibra username
-const password = 'PASSWORD'; // Replace with your Collibra password
+const username = 'SysAdmin'; // Replace with your Collibra username
+const password = 'gomer'; // Replace with your Collibra password
 //***********************************
 
 function transformData(data, comName) {
@@ -68,7 +68,10 @@ function transformData(data, comName) {
                 "DCAT:landingPage": [{"value": `Landing Page: ${d.landingPage || ""}`}],
                 "DCAT:description": [{"value": `Description: ${d.description}`}],
                 "DCAT:accessLevel": [{"value": `Access Level: ${d.accessLevel}`}],
-                "DCAT:distributionURL": [{"value": `Distribution URL: ${downloadURL}`}],
+                "DCAT:distributionURL": [{"value": `Distribution URL: ${downloadURL || "None Provided"}`}],
+                "DCAT:modified": [{"value": `Modified: ${d.modified || ""}`}],
+                "DCAT:spatial": [{"value": `Spatial: ${d.spatial || "None Provided"}`}],
+                "DCAT:license": [{"value": `License: ${d.license || ""}`}],
                 "DCAT:contactPointFullName": [
                     {"value": `Contact: ${d.contactPoint?.fn || ""}`},
                 ],
@@ -93,6 +96,7 @@ function transformData(data, comName) {
                     {"value": `Published By: ${d.publisher?.name || ""}`},
                 ],
                 "DCAT:keyword": [{"value": keywords}],
+                // "DCAT:distribution": [{"value": `Distribution: ${d.distribution || "None Provided"}`}],
             },
         };
     });
